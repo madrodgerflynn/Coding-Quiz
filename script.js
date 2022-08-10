@@ -10,12 +10,34 @@ startButton.addEventListener('click', startGame)
 
 function startGame() {
 
-    startButton.classList.add('hide')
+    
     //This is what shuffles the questions
-    shuffledQustions = questions.sort(() => Math.random() - .5);
+    shuffledQustions = questions.Math.random();
+
+    // for (var i = 0; i < 5; i++)
+    // {
+    //     console.log(i);
+    // }
+     
     currentQuestionIndex = 0;
     questionConatinerElement.classList.remove('hide');
     setNextQuestion()
+    
+    var questions = [
+        {
+            question: "What is the first letter of the alphabet",
+            answers: [
+                {text: "A", correct: true},
+                {text: '22', correct: false},
+            ]
+            
+            
+        }
+        
+            
+    
+
+    ]
 
     
     
@@ -26,6 +48,7 @@ function startGame() {
     }
     
     function showQuestion(question) {
+        //This is where I would like to fill in the question boxes
         questionElement.innerText = question.question
         
     }
@@ -35,13 +58,4 @@ function startGame() {
         
     }
     
-    var questions = [
-        {
-            question: "What is the first letter of the alphabet",
-            answers: [
-                {text: "A", correct: true},
-                {text: '22', correct: false}
-            ]
-        }
-    ]
 }
