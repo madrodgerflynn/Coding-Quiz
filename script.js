@@ -28,9 +28,18 @@ var incorrectAnswers = [
 
 
 function StartBtn() {
+    generateBtn.addEventListener('click', beginQuiz);
+
+ function beginQuiz() {
+    var  questionConatinerElement = questions[0];
+       
+        console.log(questionConatinerElement);
+    // var answerButtonsElement = correctAnswers
     
-    generateBtn.addEventListener('click', start);
+
+    
+    
 
 
-
+}
 }
