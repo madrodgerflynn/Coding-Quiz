@@ -1,61 +1,36 @@
-var startButton = document.getElementById('start-btn')
-var questionConatinerElement = document.getElementById('question-container')
-var questionElement = document.getElementById('question');
-var answerButtonsElement = document.getElementById('answer-buttons')
+var startButton = document.getElementById("start-btn");
+var questionConatinerElement = document.getElementById("question-container");
+var questionElement = document.getElementById("question");
+var answerButtonsElement = document.getElementById("answer-buttons");
 
-var shuffledQustions = "";
-var currentQuestionIndex = "";
+var questions = [
+    "What is the 13th letter of the alphabet",
+    "Who was the 3rd President of the USA",
+    "Who was the first woman in space?",
+];
 
-startButton.addEventListener('click', startGame)
+var correctAnswers = [
+    "M", "Thomas Jefferson", "Valentina Tereshkova"
+];
 
-function startGame() {
+var incorrectAnswers = [
+    "Z",
+    "A",
+    "F",
+    "John Adams",
+    "James Madison",
+    "John Quincy Adams",
+    "Svetlana Yevgenyevna Savitskaya",
+    "Serena M. Auñón-Chancello",
+    "Samantha Cristoforetti",
 
-    
-    //This is what shuffles the questions
-    shuffledQustions = questions.Math.random();
+];
 
-    // for (var i = 0; i < 5; i++)
-    // {
-    //     console.log(i);
-    // }
-     
-    currentQuestionIndex = 0;
-    questionConatinerElement.classList.remove('hide');
-    setNextQuestion()
-    
-    var questions = [
-        {
-            question: "What is the first letter of the alphabet",
-            answers: [
-                {text: "A", correct: true},
-                {text: '22', correct: false},
-            ]
-            
-            
-        }
-        
-            
-    
 
-    ]
+function StartBtn() {
+    
+    generateBtn.addEventListener('click', start);
 
-    
-    
-    
-    function setNextQuestion() {
-        //I want to show the questions that are shuffled through the currentQuestionIndex
-        showQuestion(shuffledQuestions[currentQuestionIndex]);
-    }
-    
-    function showQuestion(question) {
-        //This is where I would like to fill in the question boxes
-        questionElement.innerText = question.question
-        
-    }
-    
-    
-    function selectAnswer() {
-        
-    }
-    
+
+
 }
