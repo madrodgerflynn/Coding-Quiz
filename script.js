@@ -2,6 +2,7 @@ var beginButton = document.getElementById("begin-quiz");
 var questionConatinerElement = document.getElementById("question-container");
 var questionElement = document.getElementById("question");
 var answerButtonsElement = document.getElementById("answer-buttons");
+var scoreBoard = document.getElementById("scorecard")
 var runningQuestionIndex = 0;
 var score = 0;
 var globalTime = 60;
@@ -93,6 +94,7 @@ function nextQuestion(e) {
             
              $("#answer-buttons").empty();
             nextQuestion();
+            
         });
         
     }
@@ -120,7 +122,9 @@ function startTimer() {
     if (globalTime <= 0) {
       clearInterval(timerElement);
     }
-    
+    else {
+        return;
+    }
   }, 1000);
 }
 
