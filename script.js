@@ -5,6 +5,8 @@ var answerButtonsElement = document.getElementById("answer-buttons");
 var runningQuestionIndex = 0;
 var score = 0;
 var globalTime = 60;
+
+//setting up the questions as an array with objects inside
 var questions = [
   {
     question: "What is the 13th letter of the alphabet",
@@ -44,6 +46,8 @@ beginButton.addEventListener("click", beginQuiz);
 function nextQuestion(e) {
 
   if (questions[runningQuestionIndex]) {
+//Previous working code below
+    
     // questionElement.innerHTML =
     //   "<p>" + questions[runningQuestionIndex].question + "</p>";
     // answerButtonsElement.children[0].innerHTML =
@@ -75,16 +79,19 @@ function nextQuestion(e) {
         answerButtonsElement.appendChild(button);
         button.addEventListener('click', (e) => {
             console.log(questions[runningQuestionIndex -1].correct);
+            //the event trigger
             var response =  e.target.textContent
             if (questions[runningQuestionIndex -1].correct == response){
-                score ++; 
+                score +=1; 
+                alert("Score");
+                console.log(score);
             }  
             else
+            alert("womp womp womp -10 secs");
             globalTime -=10;
                 
             
-            
-            $("#answer-buttons").empty();
+             $("#answer-buttons").empty();
             nextQuestion();
         });
         

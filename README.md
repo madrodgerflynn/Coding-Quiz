@@ -14,7 +14,7 @@ As the user, you should be able to Open the game and take a timed quiz that will
 
 ## ScreenShots
 
-``coming soon``
+![The Beginning](Coding-Quiz\Screenshot.PNG "Quiz")
 
 ## Installation 
 
